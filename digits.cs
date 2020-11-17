@@ -5,34 +5,34 @@ class digits
     static void Main()
     {
         //counters of number of digits a is for one digit, b is for 2 digits, c is for 3 digits and d is for more than 3 digits
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        int d = 0;
+        int digits1 = 0;
+        int digits2 = 0;
+        int digits3 = 0;
+        int moreDigits = 0;
 
         // read the number as string to check the word "end"
         Console.Write("Insert a number: ");
-        string e = Console.ReadLine();
+        string wordInserted = Console.ReadLine();
 
-        while (e != "end")
+        while (wordInserted != "end")
         {
-            int input = Convert.ToInt32(e);
+            int numberInserted = Convert.ToInt32(wordInserted);
 
-            if (input != 0)
+            if (numberInserted != 0)
             {
-                if (input / 10 == 0)
-                    a++;  // it only has one digit
-                else if (input / 100 == 0)
-                    b++;  // the number has 2 digits
-                else if (input / 1000 == 0)
-                    c++;  // the number has 3 digits
+                if (numberInserted / 10 == 0)
+                    digits1++;  // it only has one digit
+                else if (numberInserted / 100 == 0)
+                    digits2++;  // the number has 2 digits
+                else if (numberInserted / 1000 == 0)
+                    digits3++;  // the number has 3 digits
                 else
-                    d++;  // the number has more than 3 digits
+                    moreDigits++;  // the number has more than 3 digits
             }
 
-            e = Console.ReadLine();
+            wordInserted = Console.ReadLine();
         }
 
-        Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", a, b, c, d); 
+        Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", digits1, digits2, digits3, moreDigits); 
     }
 }
