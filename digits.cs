@@ -1,16 +1,20 @@
+/*
+ * (C) IES San Vicente 2020. 1ºDAM Semipresencial. Valentina Cegarra.
+ * 
+ * Program that ask the user to enter a number to calculate the amount of digits (1, 2, 3 o more) of the inserted number.
+ * When the user enters the word "end" the program finish. * 
+ */
 using System;
 
 class digits
 {
     static void Main()
-    {
-        //counters of number of digits a is for one digit, b is for 2 digits, c is for 3 digits and d is for more than 3 digits
+    {        
         int digits1 = 0;
         int digits2 = 0;
         int digits3 = 0;
         int moreDigits = 0;
-
-        // read the number as string to check the word "end"
+        
         Console.Write("Insert a number: ");
         string wordInserted = Console.ReadLine();
 
@@ -21,13 +25,13 @@ class digits
             if (numberInserted != 0)
             {
                 if (numberInserted / 10 == 0)
-                    digits1++;  // it only has one digit
+                    digits1++;
                 else if (numberInserted / 100 == 0)
-                    digits2++;  // the number has 2 digits
+                    digits2++; 
                 else if (numberInserted / 1000 == 0)
-                    digits3++;  // the number has 3 digits
+                    digits3++; 
                 else
-                    moreDigits++;  // the number has more than 3 digits
+                    moreDigits++;
             }
 
             wordInserted = Console.ReadLine();
