@@ -29,7 +29,7 @@ public class Average
 			insertedWord = Console.ReadLine();
 		}
 
-		if (count != 0)
+		if (notesCount != 0)
 		{
 			noteAverage = notesSum / notesCount; 
 			Console.WriteLine("The average is {0}.", noteAverage);
